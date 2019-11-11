@@ -1,0 +1,37 @@
+// TOP SELLER - 
+
+
+string topSellerItem = "";
+int topSellerCode = 0;
+int topSales = 0;
+prodList = ();
+totalSalesArray = ();
+
+For product in salesDB
+	
+	if product.productcode is in prodList;
+		skip
+
+	myProd = product.productcode;
+	myProdTotal = 0;
+	For (x = myProd) in salesDB
+		myProdTotal += myProd.sales;
+	totalSalesArray.append(myProd, myProdTotal);
+	prodList.append(product.productcode)
+
+
+For item in totalSalesArray
+	if item[1] > topSales
+		topSales = item[1];
+		topSellerCode = item[0];
+		
+
+For stuff in productDB
+	if stuff.productcode == topSellerCode
+		topSellerItem = stuff.description;
+
+print('The top selling Item is' topSellerItem); 
+
+		
+	
+		
